@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>cable04</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script> -->
+  <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+  <link rel="stylesheet" href="{% static 'css/main_style.css' %}">
+  <script src="{% static 'js/app.js' %}"></script>        
+</head>
+
+<body>
+  <header role="header" data-include="header.html">
+        <div id="headerwrap">
+            <div id="header">
+                <h1>
+                    <a href="{% url 'home' %}">logo</a>
+                </h1>
+                <div class="nav1">
+                    <a>회원가입</a>
+                    <a>로그인</a>
+                </div>
+                <div id="gnb">
+                    <ul class="gw">
+                        <li><a href="{% url 'home' %}">프로그램</a></li>
+                        <li><a href="{% url 'about' %}">품셈정보</a></li>
+                        <li><a>지식정보</a></li>
+                        <li><a>커뮤니티</a></li>
+                        <li><a>다운로드</a></li>
+                        <li><a>고객센터</a></li>
+                    </ul>                        
+                </div>
+            </div>
+        </div>        
+  </header>
+    <section class="content-wrap">
+    <nav>
+      <section class="nav_title">Sidebar</section>
+      <ul class="menu">
+        {% block sidebar %}
+        {% endblock %}
+        <li><a>sidemenu</a></li>
+        <li><a href="#">sidemenu1</a></li>
+        <li><a href="#none">sidemenu2</a></li>
+        <li><a href="#">sidemenu3</a></li>
+        <li><a href="#">sidemenu4</a></li>
+        <li><a href="#none">sidemenu5</a></li>
+      </ul>
+    </nav>
+
+    <article>
+      <h1>Title</h1>
+      <p>contents</p>
+      <hr>
+      <section>
+        <article>
+            {% block content %}
+        
+            {% endblock%}          
+        </article>
+      </section>
+    </article>
+  </section>
+
+  <footer>
+        <div>
+            <hr>
+            Copyright
+        </div>
+  </footer>
+</body>
+
+</html>

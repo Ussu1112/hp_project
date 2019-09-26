@@ -1,0 +1,133 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+*{
+  box-sizing:border-box;
+}
+body{
+  margin:0; padding:0; font-family: 'Nanum Gothic', Arial, Helvetica, sans-serif;;
+}
+#header h1 a{
+  padding : 0; margin-left:30px; margin-top:40px;
+}
+#headerwrap { position:fixed; top:0; left:0; width:100%; text-align:center; z-index:1000; border:1px solid black;}
+#headerwrap #header {position:relative; max-width:100%; height:90px; margin:0 auto; text-align:left; }
+#header{ display:flex;  height:auto;  background-color: #ccc;  margin :0;  height: 100px; }
+#header .nav1{
+  position: absolute; top:10px; right: 20px;color:white;
+}
+#gnb { 
+   position:absolute; width: 800px; width:100%;
+}
+#gnb .gw { display: flex; justify-content: center; overflow:hidden; width:100%;  padding:0; z-index:10; }
+#gnb .gw li { float:left; width:12%; list-style : none; }
+#gnb .gw li a { 
+  display:block; 
+  width:100%; 
+  height:91px; 
+  line-height:91px; 
+  text-align:center;
+  font-weight:800; 
+  font-size:18px; 
+  color: white; letter-spacing:-0.5pt;
+  text-decoration:none;  
+}
+#gnb .gw li a:hover,#gnb li a.on { color:#a9a9aa; }
+
+@media (max-width:600px){
+  #gnb {
+      display:none;
+  }
+}
+/* Style the header */
+header {
+  display:flex;
+  flex:1;
+}
+
+/* Container for flexboxes */
+section {
+  display: -webkit-flex;
+  display: flex;
+}
+.content-wrap{
+  margin :0 auto;
+  margin-top : 100px;  
+  width : 1000px;
+}
+
+/* Style the navigation menu */
+.nav_title{
+  display: flex;
+  justify-content: center;
+  padding : 30px 0 30px 0;
+  font-size: 18px;
+  font-weight : bold;
+  height:auto;
+  background-color: #009688;
+  color:white;
+}
+nav {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background: white;
+  border : 1px solid black;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding : 0px;
+  margin:0;
+}
+nav ul li{
+  padding: 0;  
+  border-bottom : 1px solid #ccc;
+}
+nav ul li a:visited{
+  text-decoration :none;
+  color :black;
+}
+nav ul a{
+  display:flex;
+  text-decoration: none;
+  padding: 10px;
+}
+nav > ul > li:hover{ 
+  background-color: #2D59D8;
+}
+
+/* Style the content */
+article {
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  background-color: white;
+  padding: 10px;
+  border : 1px solid black;
+}
+.main-title p {
+  font-size:15px;
+  color: #bbb;
+}
+article h1{
+  font-size: 20px;
+}
+article p{
+  font-size:14px;
+  color:#bbb;
+}
+
+/* Style the footer */
+footer {
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+  color: #777;
+}
+@media (max-width: 600px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
