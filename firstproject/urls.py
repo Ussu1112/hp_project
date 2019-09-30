@@ -24,9 +24,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', blog.views.home, name="home"),
     path('about/', blog.views.about, name="about"),
+    path('board/', blog.views.board, name="board"),
+    path('board/<int:blog_id>/', blog.views.detail, name="detail"),
 
     path('user/', include('user.urls')),
-
 ]
 
 if settings.DEBUG:

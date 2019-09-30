@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+<body>
+    {% block content %}
+    {% for board in boards.all %}
+    <div class = "board">
+        {{ board.title }}
+        {{ board.name }}
+        {{ board.body }}
+    </div>    
+    {% endfor %}
+    {% endblock %}
+</body>

@@ -37,7 +37,7 @@
                     <ul class="gw">
                         <li><a href="{% url 'home' %}">프로그램</a></li>
                         <li><a href="{% url 'about' %}">품셈정보</a></li>
-                        <li><a>지식정보</a></li>
+                        <li><a href="{% url 'board' %}">지식정보</a></li>
                         <li><a>커뮤니티</a></li>
                         <li><a>다운로드</a></li>
                         <li><a>고객센터</a></li>
@@ -48,7 +48,7 @@
   </header>
     <section class="content-wrap">
     <nav>
-      <section class="nav_title">Sidebar</section>
+      <section class="nav_title">Sidebar/img/category</section>
       <ul class="menu">
         {% block sidebar %}
         {% endblock %}

@@ -8,22 +8,26 @@
 <br>
 {% endif %}
 
-<h1>Login</h1>
 
-<form method="POST" action="{% url 'login'%}">
+<div class="login__layout">
+    <h1>케이블공사 로그인</h1>
+    <br>
+    <form class="login__layout__form" method="POST" action="{% url 'login'%}">
+        {% csrf_token %}
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon2"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
+            <input name="username" type="text" value="" class="form-control" placeholder="USERNAME" aria-describedby="sizing-addon2" >
+        </div> 
+        <br>
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon2"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span></span>
+            <input name="password" type="password" class="form-control" placeholder="PASSWORD" aria-describedby="sizing-addon2" value="">            
+        </div>        
+        <br>
+        <input class="btn btn-primary" type="submit" value="Login">
+    </form>
+</div>
 
-    {% csrf_token %}
-    
-    Username:
-    <br>
-    <input name="username" type="text" value="">
-    <br>
-    Password:
-    <br>
-    <input name="password" type="password" value="">
-    <br>
-    <br>
-    <input class="btn btn-primary" type="submit" value="Login">
-</form>
+
 
 {% endblock %}
