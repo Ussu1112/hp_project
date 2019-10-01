@@ -368,7 +368,8 @@ textarea {
 @font-face { font-family: 'GyeonggiBatang'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiBatang.woff') format('woff'); font-weight: normal; font-style: normal; }
 
 body{
-    margin-top: 200px;
+    margin-top: 170px;
+    font-family:'GyeonggiBatang';
 }
 .login__layout{
     display:flex;
@@ -382,7 +383,7 @@ body{
     margin : auto;
     padding : 20px 0 20px 0;
 }
-.login__layout h1{
+.login__layout h1, .signup__layout h1{
     font-size : 24px;
     margin-top:20px;
 
@@ -392,8 +393,49 @@ body{
     flex-direction: column;
     margin: 20px;
 }
+
+.form-group{
+    display:flex;
+    align-items:center;
+}
+.form-group p{
+    width:80px;
+}
+.login__site{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:20px;
+}
+.login__site a{
+    color: black;
+    text-decoration:none;
+}
+.login__site a::after{
+padding-left:5px; content:"│"
+}
+.login__site a:last-child::after{
+content:""
+}
+.signup__layout{
+    display:flex;
+    flex:1;
+    width: 360px;
+    border : 5px solid #ccc;
+    border-radius: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin : auto;
+    padding : 20px 0 20px 0;
+}
+.signup__layout__form{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
 @media ( min-height:960px ){
     body{
-        margin-top: 330px;
+        margin-top: 300px;
     }
 }

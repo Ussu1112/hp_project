@@ -6,23 +6,27 @@
 <br>
 <br>
 {% endif %}
-    <h1>Sign Up!</h1>
-    
-    <form method="POST" action="{% url 'signup' %}">
+<div class="signup__layout">
+    <h1>케이블공사 회원가입</h1>
+    <br>
+    <form class="signup__layout__form" method="POST" action="{% url 'signup' %}">
         {% csrf_token %}
-        Username:
+        
+        
+        <div class="form-group">
+            <p>Username:</p>
+            <input name="username" type="text" value="" class="form-control" placeholder="아이디">
+        </div>
         <br>
-        <input name="username" type="text" value="">
+        <div class="form-group">
+            Password:<input name="password1" type="password" value="" class="form-control" placeholder="비밀번호">
+        </div>  
         <br>
-        Password:
-        <br>
-        <input name="password1" type="password" value="">
-        <br>
-        Confirm Password:
-        <br>
-        <input name="password2" type="password" value="">
-        <br>
+        <div class="form-group">
+            Password 확인<input name="password2" type="password" value="" class="form-control" placeholder="비밀번호 확인">
+        </div>  
         <br>
         <input class="btn btn-primary" type="submit" value="Sign Up!">
     </form>
+</div>
 {% endblock %}
